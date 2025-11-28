@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
@@ -7,7 +7,32 @@ const Header = ({ className = '' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Close mobile menu on ESC key
+  useEffect(() => {
+    const handleEscKey = (event) => {
+      if (event.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscKey);
+    return () => document.removeEventListener('keydown', handleEscKey);
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('.mobile-menu-container')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
   const navigationItems = [
+    { name: 'Home', path: '/homepage' },
     { name: 'Platform Overview', path: '/platform-overview' },
     { name: 'Healthcare Intelligence', path: '/healthcare-intelligence' },
     { name: 'Pricing', path: '/pricing-implementation' },
@@ -74,12 +99,12 @@ const Header = ({ className = '' }) => {
                 View Demo
               </Button>
             </Link>
-            <Button 
-              variant="default" 
-              size="sm" 
+            <Button
+              variant="default"
+              size="sm"
               className="bg-conversion hover:bg-conversion/90 text-conversion-foreground transition-intelligence"
             >
-              Start 14-Day Trial
+              Get Demo
             </Button>
           </div>
 
@@ -99,7 +124,7 @@ const Header = ({ className = '' }) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-border bg-card/98 backdrop-blur-sm">
+          <div className="mobile-menu-container lg:hidden border-t border-border bg-card/98 backdrop-blur-sm">
             <div className="px-4 py-4 space-y-2">
               {navigationItems?.map((item) => (
                 <Link

@@ -116,7 +116,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Main Risk Meter */}
-              <div className={`w-80 h-80 rounded-full ${getRiskBgColor(surgeRisk)} p-8 shadow-clinical-lg`}>
+              <div className={`w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full ${getRiskBgColor(surgeRisk)} p-4 sm:p-6 md:p-8 shadow-clinical-lg`}>
                 <div className="w-full h-full rounded-full bg-white shadow-inner flex flex-col items-center justify-center relative overflow-hidden">
                   {/* Animated Background */}
                   <div 

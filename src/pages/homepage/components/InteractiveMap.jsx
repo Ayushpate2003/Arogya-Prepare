@@ -132,7 +132,7 @@ const InteractiveMap = () => {
 
                     {/* Detailed Info Popup */}
                     {selectedCity === hospital?.id && (
-                      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white rounded-lg p-4 shadow-xl border border-slate-200 w-64 z-10">
+                      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white rounded-lg p-3 sm:p-4 shadow-xl border border-slate-200 w-48 sm:w-56 md:w-64 z-10">
                         <div className="space-y-3">
                           <div>
                             <h4 className="font-semibold text-slate-900">{hospital?.name}</h4>

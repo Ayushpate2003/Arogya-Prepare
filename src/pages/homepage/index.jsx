@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import InteractiveMap from './components/InteractiveMap';
 import ProvenImpact from './components/ProvenImpact';
@@ -29,6 +30,7 @@ const Homepage = () => {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://arogya-prepare.com/homepage" />
       </Helmet>
+      <Header />
 
       <div className="min-h-screen bg-background">
         {/* Hero Section with Dynamic Surge Risk Meter */}

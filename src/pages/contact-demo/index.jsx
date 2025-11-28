@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Navigation from './components/Navigation';
+import Header from '../../components/ui/Header';
 import Footer from './components/Footer';
 import DemoBookingForm from './components/DemoBookingForm';
 import ContactOptions from './components/ContactOptions';
@@ -72,7 +72,7 @@ const ContactDemo = () => {
         <meta name="description" content="Book a personalized demo of Arogya-Prepare's predictive healthcare platform. Contact our regional offices across India for emergency implementation and partnership opportunities." />
         <meta name="keywords" content="healthcare demo, hospital management contact, predictive analytics demo, healthcare technology support, medical software consultation" />
       </Helmet>
-      <Navigation />
+      <Header />
       {/* Hero Section */}
       <section
         className="relative text-white py-16 bg-cover bg-center"

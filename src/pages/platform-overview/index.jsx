@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from './components/Navigation';
+import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import IntelligentDashboard from './components/IntelligentDashboard';
 import PredictiveAnalytics from './components/PredictiveAnalytics';
@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 const PlatformOverview = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
+      <Header />
       <HeroSection />
       <IntelligentDashboard />
       <PredictiveAnalytics />

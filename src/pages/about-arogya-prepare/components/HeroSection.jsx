@@ -18,7 +18,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <img
-                  src="/assets/images/no_image.jpg"
+                  src="/assets/images/logo.png"
                   alt="Arogya-Prepare Logo"
                   className="w-12 h-12 rounded-xl shadow-clinical object-cover"
                 />

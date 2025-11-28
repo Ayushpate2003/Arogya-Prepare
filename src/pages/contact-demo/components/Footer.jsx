@@ -70,9 +70,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Icon name="Activity" size={24} color="white" />
-              </div>
+              <img
+                src="/assets/images/no_image.jpg"
+                alt="Arogya-Prepare Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
               <div>
                 <h3 className="text-xl font-bold">Arogya-Prepare</h3>
                 <p className="text-sm text-slate-400">Predictive Healthcare Intelligence</p>

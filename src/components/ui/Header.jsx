@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import AppImage from '../AppImage';
 
 const Header = ({ className = '' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -61,9 +62,11 @@ const Header = ({ className = '' }) => {
             className="flex items-center space-x-3 transition-intelligence hover:opacity-80"
           >
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-clinical">
-                <Icon name="Activity" size={24} color="white" strokeWidth={2.5} />
-              </div>
+              <img
+                src="/assets/images/logo.png"
+                alt="Arogya-Prepare Logo"
+                className="w-10 h-10 rounded-lg shadow-clinical object-cover"
+              />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full pulse-intelligence"></div>
             </div>
             <div className="flex flex-col">
